@@ -1,0 +1,29 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <% if (!isAuthenticated) { %>
+        <main class="centered">
+            <h1>Please Login to view content</h1>
+        </main>
+    <% } else { %>
+        <main class="centered">
+            <h1>This is Home Page</h1>
+
+            <h3>You never get a second chance to make a first impression -- that’s why your homepage is undoubtedly one of the most important web pages on your website.
+
+                For any given company, the homepage is its virtual front door. If a new visitor doesn't like what they see, their knee-jerk reaction is to hit the "back" button.
+                
+                That's right -- unfortunately, a lot of people still judge a book by its cover.
+                
+                What makes a website's homepage design brilliant instead of blah? Well, it takes more than looks alone -- it also has to work well. 
+                That's why the most brilliant homepages on this list don't just score high in beauty, but also in brains. But before we dive into the 15-real-life examples, \
+                let's dissect some of the best practices of homepage design.
+            </h3>
+        </main>
+    <% } %>
+
+<%- include('../includes/end.ejs') %>
