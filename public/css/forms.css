@@ -1,0 +1,31 @@
+.card-container {
+  width: auto;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-login {
+  margin: 1rem 0;
+}
+
+.form-login label,
+.form-login input,
+.form-login textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.form-login input,
+.form-login textarea {
+  border: 1px solid #a1a1a1;
+  font: inherit;
+  border-radius: 2px;
+}
+
+.form-login input:focus,
+.form-login textarea:focus {
+  outline-color: #ab74e3;
+}

@@ -1,0 +1,30 @@
+<div class="backdrop"></div>
+<header class="main-header">
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+            <li class="main-header__item">
+                <p class ="main-heading">Notebook</p>
+            </li>
+        </ul>
+        <ul class="main-header__item-list">
+            <% if (!isAuthenticated) { %>
+                <% if (path === '/') { %>
+                    <li class="main-header__item">
+                        <a class="<%= path === '/signup' ? 'active' : '' %>" href="/signup">Signup</a>
+                    </li>
+                <% } else { %>
+                    <li class="main-header__item">
+                        <a class="<%= path === '/' ? 'active' : '' %>" href="/">Login</a>
+                    </li>
+                <% } %>
+            <% } else { %>
+                <li class="main-header__item">
+                    <form action="/logout" method="post">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+            <% } %>
+        </ul>
+    </nav>
+</header>
